@@ -33,7 +33,7 @@ public static void captureSS(WebDriver driver,int TCID) throws IOException
 {
 	//FileInputStream file=new FileInputStream("E:\\ScreenShot\\Screenshot\\failedTCID"+TCID+".jpg");
   File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-  File dest=new File("C:\\Users\\Nexas\\eclipse-workspace\\Selenium_Rivision_Maven\\failedTceses\\TestCaseID"+TCID+".jpg");
+  File dest=new File("C:\\Users\\Nexas\\eclipse-workspace\\Selenium_Rivision_Maven\\failedTceses"+TCID+".jpg");
   FileHandler.copy(src, dest);
 }
 

@@ -3,9 +3,9 @@
   <groupId>Demo</groupId>
   <artifactId>Selenium_Rivision_Maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
-	
-	
+
+
+ <dependencies>
 	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -20,6 +20,43 @@
     <version>5.2.3</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.8.0</version>
+    <scope>test</scope>
+</dependency>
+</dependencies>
 
-  </dependencies>
+
+ <build>
+    <pluginManagement>
+      <plugins>
+		  
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+           <configuration>
+            <!-- put your configurations here -->
+         </configuration>
+        </plugin>
+        
+        
+         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.1.2</version>
+          <configuration>
+			  <suiteXmlFiles>
+				  <suiteXmlFile>PBLoginTest.xml</suiteXmlFile>
+			  </suiteXmlFiles>
+		  </configuration>
+        </plugin>
+        
+        
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
